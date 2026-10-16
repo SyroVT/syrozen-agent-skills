@@ -1,0 +1,27 @@
+{
+  "name": "syrozen-agent-skills",
+  "owner": {
+    "name": "Tayen"
+  },
+  "metadata": {
+    "description": "Practical agent skills from building real SaaS products: full site checks, access control audits, payment webhooks and living plans. Created by syrozen.com.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "syrozen",
+      "description": "Four skills: full-site-check, route-access-audit, payment-webhook-safety, living-plans.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/full-site-check",
+        "./skills/route-access-audit",
+        "./skills/payment-webhook-safety",
+        "./skills/living-plans"
+      ],
+      "author": {
+        "name": "Tayen"
+      }
+    }
+  ]
+}
