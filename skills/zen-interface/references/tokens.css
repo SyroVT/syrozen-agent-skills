@@ -1,0 +1,50 @@
+/* Starter tokens. Replace the example values with the brand's, keep the structure. */
+:root{
+  /* Colour: one ink, one paper, one accent. */
+  --paper:#FFFFFF;
+  --mist:#F4F5F7;            /* alternate sections */
+  --ink:#111214;             /* near-black, slightly tinted, never pure #000 */
+  --ink-2:#3A3D42;           /* secondary text */
+  --muted:#666A71;           /* labels, captions: check 4.5:1 on paper and mist */
+  --line:rgba(17,18,20,.10); /* hairlines */
+  --field-line:#878B92;      /* form field borders: 3:1 against paper */
+  --accent:#2F6F5E;          /* used sparingly: marks, selection, small details */
+  --accent-deep:#24584A;     /* the accent's darker shade for text on paper */
+  --action:#9C4A1F;          /* optional second accent with ONE job: hover and focus */
+
+  /* Type: one variable sans, one mono. Self-host the files. */
+  --font:"Your Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Your Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --h1:clamp(44px,8.4vw,112px);
+  --h2:clamp(32px,5vw,60px);
+  --lede:clamp(17px,1.6vw,20px);
+  --body:17px;
+  --label:12px;
+
+  /* Space and layout. */
+  --wrap:1180px;
+  --gutter:clamp(16px,4vw,40px);
+  --section:clamp(72px,12vw,150px);
+  --nav-h:64px;
+
+  /* Shape. */
+  --pill:999px;
+  --radius:10px;
+
+  /* Motion: two curves only. */
+  --ease-out:cubic-bezier(.23,1,.32,1);      /* things arriving */
+  --ease-in-out:cubic-bezier(.77,0,.175,1);  /* things moving between two places */
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:calc(var(--nav-h) + 16px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:var(--body);line-height:1.55;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+h1,h2,h3{margin:0;font-weight:500;letter-spacing:-.025em;line-height:1.08;text-wrap:balance}
+h1{font-size:var(--h1);letter-spacing:-.045em;line-height:.98}
+h2{font-size:var(--h2)}
+p{margin:0;text-wrap:pretty}
+::selection{background:var(--accent);color:var(--paper)}
+:focus-visible{outline:2px solid var(--action);outline-offset:3px;border-radius:4px}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-delay:0s !important;transition-duration:.01ms !important}
+}
